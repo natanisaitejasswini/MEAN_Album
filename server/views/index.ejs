@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Karthik N - MEAN APP </title>
+	<link href="/public/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="/public/vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/public/css/bootstrap-superhero.css" rel="stylesheet">
+	<link href="/public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="/public/css/creative.css" rel="stylesheet">
+	<link href="/public/css/app.css" rel="stylesheet">
+
+
+</head>
+<body ng-app="album" >
+<div ng-include="'/public/app/header/header.ejs'"></div>
+
+<div ng-include="'/public/app/common/alert.ejs'"></div>
+<div class="" ng-cloak>
+<div class="row">
+	<div class="ui-view-container">
+		<div ui-view></div>
+	</div>
+
+</div>
+</div>
+<div ng-include="'/public/app/footer/footer.ejs'"></div>
+<%- include currentUser%>
+
+	<script type="text/javascript" src="/public/vendor/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="/public/vendor/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/public/vendor/angular/angular.js"></script>
+	<script type="text/javascript" src="/public/vendor/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="/public/vendor/angular-animate/angular-animate.js"></script>
+	<script type="text/javascript" src="/public/vendor/angular-aria/angular-aria.js"></script>
+	<script type="text/javascript" src="/public/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+
+	
+<!--Custom Scripts-->
+<script type="text/javascript" src="/public/app/app.js"></script>
+<script type="text/javascript" src="/public/app/app.config.js"></script>
+<!--Services-->
+<script type="text/javascript" src="/public/app/common/alertService.js"></script>
+<script type="text/javascript" src="/public/app/common/exists.js"></script>
+<script type="text/javascript" src="/public/app/userAuth/userAuth.js"></script>
+<script type="text/javascript" src="/public/app/courses/courseService.js"></script>
+<script type="text/javascript" src="/public/app/courses/courseCached.js"></script>
+
+<script type="text/javascript" src="/public/app/event/eventCached.js"></script>
+<script type="text/javascript" src="/public/app/event/eventService.js"></script>
+
+
+<!--Factories--> 
+<script type="text/javascript" src="/public/app/userAuth/identityFactory.js"></script>
+<script type="text/javascript" src="/public/app/userAuth/authFactory.js"></script>
+<script type="text/javascript" src="/public/app/courses/courseFact.js"></script>
+<script type="text/javascript" src="/public/app/event/eventFact.js"></script>
+
+
+<!--Directives-->
+<script type="text/javascript" src="/public/app/userAuth/validateEqlDirective.js"></script>
+<script type="text/javascript" src="/public/app/userAuth/loginCtrl.js"></script>
+<script type="text/javascript" src="/public/app/header/headerCtrl.js"></script>
+<script type="text/javascript" src="/public/app/courses/courseCtrl.js"></script>
+<script type="text/javascript" src="/public/app/admin/usersListCtrl.js"></script>
+<script type="text/javascript" src="/public/app/userAuth/registerCtrl.js"></script>
+<script type="text/javascript" src="/public/app/userAuth/profileUpdateCtrl.js"></script>
+<script type="text/javascript" src="/public/app/courses/addNewCourseCtrl.js"></script>
+<script type="text/javascript" src="/public/app/event/addNewEventCtrl.js"></script>
+<script type="text/javascript" src="/public/app/common/uniqueDirective.js"></script>
+
+<!--Events-->
+<script type="text/javascript" src="/public/app/event/eventCtrl.js"></script>
+
+
+<!--CDNs-->
+
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+</body>
+</html>

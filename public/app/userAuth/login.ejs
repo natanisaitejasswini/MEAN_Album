@@ -1,0 +1,24 @@
+<div class="jumbotron" style="margin:60px; "> 
+<form name="loginForm" class="form-signin" novalidate ng-controller="loginCtrl" style="padding:20px;">
+    <h3 class="form-signin-heading" style="text-transform: uppercase">Login</h3>
+    <input name="username" ng-model="username" type="text" class="form-control" placeholder="Email address"required>
+    <p class="help-block" ng-show="loginForm.username.$dirty && loginForm.username.$invalid">Please enter a proper email.</p>
+    <input name="password" ng-model="password" type="password" class="form-control" placeholder="Password" required>
+    <button ng-click="login(username, password)" ng-disabled="loginForm.$invalid" class="btn btn-lg btn-primary btn-block">Login</button>
+ <br/>
+ <a class="pull-right" ui-sref="register">Create Account</a>
+</form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

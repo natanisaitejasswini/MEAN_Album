@@ -1,0 +1,20 @@
+<div class="courses_list " ng-controller="usersListCtrl" style="margin-top:40px; ">
+    <div class="jumbotron">
+     
+         <ul class="thumbnail" ng-repeat="user in users">
+        <li><h4 class="row">
+            <span class="col-sm-6">{{user.firstName + ' ' + user.lastName}}</span>
+             
+           </h4>
+        </li>
+ 
+    </li>
+    </ul>
+
+
+    <!--<pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages" items-per-page="itemsPerPage"></pagination>
+    -->
+    </div>
+    
+</div>
+

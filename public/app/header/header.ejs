@@ -1,0 +1,38 @@
+    <nav class="navbar navbar-default navbar-fixed-top" ng-controller="headerCtrl">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" ui-sref="main">Event Hosting</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right" >
+                  
+              <li ui-sref-active="active"><a ui-sref="main">Home</a></li>
+              <li ui-sref-active="active"><a ui-sref="courses">Courses</a></li>
+              <li ng-show="identity.isAuthenticated()" ui-sref-active="active"><a ui-sref="addNewCourse">Add New Course</a></li>  
+              <li ui-sref-active="active"><a ui-sref="events">Events</a></li>
+              <li  ui-sref-active="active" ng-hide="identity.isAuthenticated()"><a ui-sref="login">Login</a></li>
+              <li class="dropdown" ng-show="identity.isAuthenticated()">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{identity.currentUser.firstName + " " + identity.currentUser.lastName}}
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                        <li ng-show="!identity.currentUser.isAdmin()"  ui-sref-active="active"><a ui-sref="users">Registred Users </br>(Only Admin has Access)</a></li>
+                       <li  ui-sref-active="active"><a ui-sref="profileUpdate">Update Profile</a></li>
+                    <li  ui-sref-active="active"><a style="cursor: pointer" ng-click="logout()">Sign Out</a></li>
+                  </ul>
+            </li>
+             <li ><a href="http://35.163.105.112/">My Resume</a></li>
+            </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+  
